@@ -9,11 +9,11 @@ app.controller('MainCtrl', function ($scope, $http) {
 });
 
 app.controller('MessagesCtrl', function ($scope, $http) {
-  $http.get('https://shielded-peak-6345.herokuapp.com/').then(function (data) {
+  $http.get('https://shielded-peak-6345.herokuapp.com/messages').then(function (data) {
     $scope.railsData = data;
   });
   $scope.addMessage = function () {
-    $http.post('https://shielded-peak-6345.herokuapp.com/', {
+    $http.post('https://shielded-peak-6345.herokuapp.com/messages', {
     name: $scope.messageName,
     content: $scope.messageContent
   }).then(function (response) {

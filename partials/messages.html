@@ -1,11 +1,11 @@
 <div ng-controller="MessagesCtrl">
   <h3>Comments</h3>
   <p></p>
-  <form method="post" action="/messages">
+  <form name="newMessage" ng-submit='addMessage()'>
     <h4>Post a Comment:</h4>
-    <input type="text" name="name" placeholder="Name">
+    <input type="text" name="messageName" placeholder="Name">
     <p></p>
-    <input type="text" name="content" placeholder="Content">
+    <input type="text" name="messageContent" placeholder="Content">
     <p></p>
     <input type="submit" value="Post Comment">
   </form>
