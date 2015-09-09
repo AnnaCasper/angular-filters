@@ -6,4 +6,18 @@ app.controller('MainCtrl', function ($scope, $http) {
   $http.get('itunes.json').then(function (data) {
     $scope.appleData = data;
   });
+});
+
+app.controller('MessagesCtrl', function ($scope, $http) {
+  $http.get('https://shielded-peak-6345.herokuapp.com/').then(function (data) {
+    $scope.railsData = data;
+  });
+  $scope.addMessage = function () {
+    $http.post('https://shielded-peak-6345.herokuapp.com/', {
+    name: $scope.messageName,
+    content: $scope.messageContent
+  }).then(function (response) {
+      console.log(response);
+    });
+  }
 })
