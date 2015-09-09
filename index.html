@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myapp">
   <head>
     <meta charset="utf-8">
     <title></title>
@@ -12,7 +12,7 @@
     <script type="text/javascript" src="/js/controllers.js"></script>
     <script type="text/javascript" src="/js/filters.js"></script>
   </head>
-  <body>
-    
+  <body ng-controller="MainCtrl">
+    {{ 3 | kebab}}
   </body>
 </html>
