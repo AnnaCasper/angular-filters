@@ -39,4 +39,10 @@ app.filter('pigLatin', function () {
     })
     return result.join(' ')
   }
+});
+
+app.filter('redact', function () {
+  return function (input, word) {
+    return input.replace(word, 'REDACTED')
+  }
 })
